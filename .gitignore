@@ -6,13 +6,6 @@ env/
 # Ignore Django development server
 *.log
 
-# Ignore database files
-db.sqlite3
-
-# Ignore static files
-staticfiles/
-
-
 # Ignore compiled Python files
 *.pyc
 __pycache__/
