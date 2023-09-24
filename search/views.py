@@ -1,7 +1,7 @@
 # search/views.py
 
 from django.shortcuts import render
-from book_shop.models import BookForSale
+from shop.models import ItemsForSale
 
 def search_books(request):
     if request.method == 'POST':
@@ -10,8 +10,8 @@ def search_books(request):
         count = 0
 
         if search_text:
-            obj = BookForSale.objects.filter(title__icontains=search_text) | \
-                  BookForSale.objects.filter(author__icontains=search_text)
+            obj = ItemsForSale.objects.filter(title__icontains=search_text) | \
+                  ItemsForSale.objects.filter(author__icontains=search_text)
             count = obj.count()
 
         context = {'results': obj, 'search_text': search_text, 'count': count}

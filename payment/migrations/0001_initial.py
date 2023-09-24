@@ -9,7 +9,7 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('book_shop', '0005_order'),
+        ('shop', '0005_order'),
     ]
 
     operations = [
@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('razorpay_signature', models.CharField(max_length=255)),
                 ('amount', models.FloatField()),
                 ('status', models.CharField(choices=[('pending', 'Pending'), ('success', 'Success'), ('failed', 'Failed')], default='pending', max_length=255)),
-                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='book_shop.order')),
+                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='shop.order')),
             ],
         ),
     ]

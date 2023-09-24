@@ -1,13 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from book_shop.models import BookForSale
+from shop.models import ItemsForSale
 
 
 # Create your views here.
 
 def home_view(request):
-    featured = BookForSale.objects.filter(featured=True)
+    featured = ItemsForSale.objects.filter(featured=True)
     context = {'featured': featured}
     # Render the template with the given context
     return render(request, 'index.html', context)

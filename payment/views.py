@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseBadRequest
 from django.contrib.auth.decorators import login_required
 
-from book_shop.models import Order, Cart
+from shop.models import Order, Cart
 
 # authorize razorpay client with API Keys.
 razorpay_client = razorpay.Client(

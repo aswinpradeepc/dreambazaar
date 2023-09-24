@@ -63,43 +63,6 @@
                 <!-- HOT OFFERS end -->
                 <!-- HOT OFFERS end -->
 
-                <!-- Used Books start -->
-                <!-- Used Books start -->
-                <!-- Used Books start -->
-                <div class="col-lg-12 col-md-7">
-                    <div class="product__discount">
-                        <div class="section-title product__discount__title">
-                            <h2>Used Books</h2>
-                        </div>
-                        <div class="row">
-                            <div class="product__discount__slider owl-carousel">
-                                {% for book in used_books %}
-                                    <div class="col-lg-4">
-                                        <div class="product spad">
-                                            <div class="container">
-                                                <a href="{% url 'shop-details' book.id %}">
-                                                    <div class="product__discount__item__pic set-bg"
-                                                         data-setbg="{{ book.image.url }}">
-                                                        <div class="product__discount__percent">-20%</div>
-                                                    </div>
-                                                </a>
-                                                <div class="product__discount__item__text">
-                                                    <h5>{{ book.title }}</h5>
-                                                    <div class="product__item__price">₹{{ book.price }}</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Used Books end -->
-                <!-- Used Books end -->
-                <!-- Used Books end -->
-
                 <div class="filter__item">
                     <div class="row">
                         <div class="section-title product__discount__title">
