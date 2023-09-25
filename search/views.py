@@ -3,15 +3,14 @@
 from django.shortcuts import render
 from shop.models import ItemsForSale
 
-def search_books(request):
+def search_items(request):
     if request.method == 'POST':
         search_text = request.POST.get('q', '')
         obj = None
         count = 0
 
         if search_text:
-            obj = ItemsForSale.objects.filter(title__icontains=search_text) | \
-                  ItemsForSale.objects.filter(author__icontains=search_text)
+            obj = ItemsForSale.objects.filter(title__icontains=search_text)
             count = obj.count()
 
         context = {'results': obj, 'search_text': search_text, 'count': count}

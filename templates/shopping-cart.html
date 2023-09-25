@@ -39,11 +39,11 @@
                                 {% for cart_item in cart_items %}
                                 <tr>
                                     <td class="shoping__cart__item">
-                                        <img src="{{ cart_item.book.image.url }}" alt="{{ cart_item.book.title }}">
-                                        <h5>{{ cart_item.book.title }}</h5>
+                                        <img src="{{ cart_item.item.image.url }}" alt="{{ cart_item.item.title }}">
+                                        <h5>{{ cart_item.item.title }}</h5>
                                     </td>
                                     <td class="shoping__cart__price">
-                                        ₹{{ cart_item.book.price }}
+                                        ₹{{ cart_item.item.price }}
                                     </td>
                                     <td class="shoping__cart__item__close">
                                         <a href="{% url 'remove_from_cart' cart_item.id %}">

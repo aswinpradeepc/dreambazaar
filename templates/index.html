@@ -13,22 +13,22 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>All departments</span>
+                            <span>All Categories</span>
                         </div>
                         <ul>
-                            <li><a href="/departments/exams">Groceries</a></li>
-                            <li><a href="/departments/academics">Fruits and Vegetables</a></li>
-                            <li><a href="/departments/novels">Dairy Products</a></li>
-                            <li><a href="/departments/stationery">Meat and Seafood</a></li>
-                            <li><a href="/departments/children">Bakery</a></li>
-                            <li><a href="/departments/used">Cleaning Supplies</a></li>
+                            <li><a href="/categories/Grocery">Groceries</a></li>
+                            <li><a href="/categories/Fresh">Fruits and Vegetables</a></li>
+                            <li><a href="/categories/Dairy">Dairy Products</a></li>
+                            <li><a href="/categories/Meat">Meat</a></li>
+                            <li><a href="/categories/Bakery">Bakery</a></li>
+                            <li><a href="/categories/Cleaners">Cleaning Supplies</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-9">
                     <div class="hero__search">
                         <div class="hero__search__form">
-                            <form action="{% url 'search_books' %}" method="POST">
+                            <form action="{% url 'search_items' %}" method="POST">
                                 <input type="text" name="q" placeholder="Search our store...">
                                 <button type="submit" class="site-btn">SEARCH</button>
                             </form>
@@ -57,35 +57,35 @@
             <div class="row">
                 <div class="categories__slider owl-carousel">
                     <div class="col-lg-3">
-                        <a href="/departments/children">
+                        <a href="/categories/Grocery">
                             <div class="categories__item set-bg" data-setbg="{% static "img/categories/cat-1.jpg" %}">
                                 <h5>Groceries</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="/departments/exams">
+                        <a href="/categories/Fresh">
                             <div class="categories__item set-bg" data-setbg="{% static "img/categories/cat-2.jpg" %}">
                                 <h5>Fruits and Vegetables</h5></h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="/departments/novels">
+                        <a href="/categories/Dairy">
                             <div class="categories__item set-bg" data-setbg="{% static "img/categories/cat-4.jpg" %}">
                                 <h5>Dairy Products</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="/departments/academics">
+                        <a href="/categories/Meat">
                             <div class="categories__item set-bg" data-setbg="{% static "img/categories/cat-5.jpg" %}">
                                 <h5>Meat and Seafood</h5>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="/departments/used">
+                        <a href="/categories/Bakery">
                             <div class="categories__item set-bg"
                                  data-setbg="{% static "img/categories/bakery.jpg" %}">
                                 <h5>Bakery</h5>
@@ -93,7 +93,7 @@
                         </a>
                     </div>
                     <div class="col-lg-3">
-                        <a href="/departments/stationery">
+                        <a href="/categories/Cleaners">
                             <div class="categories__item set-bg"
                                  data-setbg="{% static "img/categories/cleaning.jpg" %}">
                                 <h5>Cleaning Supplies</h5>

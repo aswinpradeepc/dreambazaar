@@ -5,3 +5,4 @@ from .models import *
 
 admin.site.register(ItemsForSale)
 admin.site.register(Order)
+admin.site.register(CartItem)

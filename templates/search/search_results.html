@@ -26,19 +26,19 @@
                 <h2>Search Results:</h2>
                 <p>Found {{ count }} results for "{{ search_text }}":</p>
                 <div class="row">
-                    {% for book in results %}
+                    {% for item in results %}
                         <div class="col-lg-4 col-md-6">
                             <div class="product__item">
-                                <a href="{% url 'shop-details' book.id %}">
-                                    <div class="product__item__pic set-bg" data-setbg="{{ book.image.url }}">
+                                <a href="{% url 'shop-details' item.id %}">
+                                    <div class="product__item__pic set-bg" data-setbg="{{ item.image.url }}">
                                         <ul class="product__hover">
                                             <li><span class="arrow_expand"></span></li>
                                         </ul>
                                     </div>
                                     <div class="product__item__text">
-                                        <h6>{{ book.title }}</h6>
-                                        <p>Department: {{ book.department }}</p>
-                                        <h5>{{ book.price }}</h5>
+                                        <h6>{{ item.title }}</h6>
+                                        <p>Department: {{ item.department }}</p>
+                                        <h5>{{ item.price }}</h5>
                                     </div>
                                 </a>
                             </div>
